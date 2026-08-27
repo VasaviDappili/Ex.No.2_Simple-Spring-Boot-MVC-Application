@@ -165,7 +165,7 @@ server.port=8081
 ```
  
 # Output:
-<img width="1920" height="1080" alt="exp2 ajw output" src="https://github.com/user-attachments/assets/f84d1986-f7bd-454f-a1c7-ef534aac58c6" />
+<img width="1919" height="1011" alt="image" src="https://github.com/user-attachments/assets/dd731a49-5c39-4e89-816a-7cac1fdf7df6" />
 
 
 ### Result
