@@ -151,7 +151,7 @@ public class HomeController {
     <title>Spring MVC</title>
 </head>
 <body>
-<h1>Hello,Ankitha</h1>
+
 <h1 th:text="${message}">Default Message</h1>
 
 </body>
