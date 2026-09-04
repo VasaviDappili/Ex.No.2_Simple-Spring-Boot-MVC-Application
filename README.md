@@ -56,77 +56,92 @@ Open a browser and navigate to http://localhost:8081/
 ### pom.xml :
 
 ```
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>4.1.0</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<version>3.5.4</version>
+		<relativePath/>
 	</parent>
+
 	<groupId>com.example</groupId>
-	<artifactId>ajw-exp-2</artifactId>
+	<artifactId>exp2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-<properties>
+
+	<name>exp2</name>
+	<description>Spring MVC Experiment</description>
+
+	<properties>
 		<java.version>21</java.version>
 	</properties>
+
 	<dependencies>
+
+		<!-- Spring Web -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- Thymeleaf -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
+
+		<!-- Testing -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-webmvc</artifactId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-webmvc-test</artifactId>
-			<scope>test</scope>
-		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
 		</plugins>
 	</build>
 
 </project>
-
 ```
 
-### AjwExp2Application.java (Main Class):
+### Exp2Application.java (Main Class):
 
 ```
-package com.example.ajw.exp_2;
+package com.example.exp2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AjwExp2Application {
+public class Exp2Application {
 
-    public static void main(String[] args) {
-        SpringApplication.run(AjwExp2Application.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(Exp2Application.class, args);
+	}
+
 }
+
 ```
 
 ### HomeController.java (Controller):
 
 ```
-package com.example.ajw.exp_2;
+package com.example.exp2;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -141,17 +156,18 @@ public class HomeController {
         return "index";
     }
 }
+
 ```
 ### index.html (View – inside src/main/resources/templates/):
 
 ```
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="">
 <head>
     <title>Spring MVC</title>
 </head>
 <body>
-
+<h1>Hello,Vasavi</h1>
 <h1 th:text="${message}">Default Message</h1>
 
 </body>
@@ -159,13 +175,13 @@ public class HomeController {
 ```
 ### application.properties:
 ```
-spring.application.name=ajw-exp-2
-server.port=8081
-
+spring.application.name=exp2
+server.port=8080
 ```
  
 # Output:
-<img width="1919" height="1011" alt="image" src="https://github.com/user-attachments/assets/dd731a49-5c39-4e89-816a-7cac1fdf7df6" />
+<img width="1600" height="900" alt="WhatsApp Image 2026-09-04 at 2 04 22 PM" src="https://github.com/user-attachments/assets/c00688ac-e594-4dc5-96e5-8f5bdcd3cefa" />
+
 
 
 ### Result
